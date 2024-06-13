@@ -6,7 +6,9 @@
 |**Tugas** |_Tgs Pertemuan 14_|
 
 ### Penguraian Pengolahan Citra
+
 ---
+
 import requests
 import cv2
 import numpy as np
@@ -67,4 +69,14 @@ plt.show()
 
 ### Hasil Output
 ---
+
+![Screenshot (239)](https://github.com/IdrisSyahrudin/Tgs14Pengola-citra/assets/129921422/5c3aff69-df4d-447a-b664-2ac003bb75ea)
+
+![Screenshot (240)](https://github.com/IdrisSyahrudin/Tgs14Pengola-citra/assets/129921422/70550ed6-1465-4f26-ad96-e4b6c24254b9)
+
+![Screenshot (241)](https://github.com/IdrisSyahrudin/Tgs14Pengola-citra/assets/129921422/b40eb001-5919-4d4e-996e-f6d00ff7cc52)
+
+
+
+
 
