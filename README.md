@@ -5,7 +5,7 @@
 |**Mata Kuliah**|_Pemgraman Web 2_|
 |**Tugas** |_Praktikum 7_|
 
-###Penguraian Pengolahan Citra
+### Penguraian Pengolahan Citra
 ---
 import requests
 import cv2
@@ -65,4 +65,6 @@ for i in range(len(comps)):
 plt.tight_layout()
 plt.show()
 
-###Hasil Output
+### Hasil Output
+---
+
