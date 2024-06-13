@@ -6,41 +6,30 @@
 |**Tugas** |_Tgs Pertemuan 14_|
 
 ### Penguraian Pengolahan Citra
-
----
-
+```
 import requests
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 url = 'https://i.pinimg.com/236x/09/9e/4b/099e4b650e504d4793a9422fc015e919.jpg'
 response = requests.get(url, stream=True)
 
-
 with open('image.png', 'wb') as f:
     f.write(response.content)
-
-
+    
 img = cv2.imread('image.png')
-
 
 gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-
 u, s, v = np.linalg.svd(gray_image, full_matrices=False)
-
 
 print(f'u.shape:{u.shape}, s.shape:{s.shape}, v.shape:{v.shape}')
 
-
 var_explained = np.round(s*2 / np.sum(s*2), decimals=6)
 
-
 print(f'Variance Explained by Top 20 singular values:\n{var_explained[0:20]}')
-
 
 sns.barplot(x=list(range(1, 21)), y=var_explained[0:20], color="dodgerblue")
 
@@ -50,25 +39,24 @@ plt.ylabel('Variance Explained', fontsize=16)
 plt.tight_layout()
 plt.show()
 
-
 comps = [3648, 1, 5, 10, 15, 20]
 plt.figure(figsize=(12, 6))
 
 for i in range(len(comps)):
     low_rank = u[:, :comps[i]] @ np.diag(s[:comps[i]]) @ v[:comps[i], :]
-
+    
     plt.subplot(2, 3, i + 1)
     plt.imshow(low_rank, cmap='gray')
     if i == 0:
         plt.title(f'Actual Image with n_components = {comps[i]}')
     else:
         plt.title(f'n_components = {comps[i]}')
-
+        
 plt.tight_layout()
 plt.show()
-
+```
 ### Hasil Output
----
+
 
 ![Screenshot (239)](https://github.com/IdrisSyahrudin/Tgs14Pengola-citra/assets/129921422/5c3aff69-df4d-447a-b664-2ac003bb75ea)
 
