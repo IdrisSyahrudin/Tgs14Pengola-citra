@@ -2,8 +2,8 @@
 | :- | :- |
 |**Nim** |_312210467_|
 |**Kelas** |_TI.22.A.5_|
-|**Mata Kuliah**|_Pemgraman Web 2_|
-|**Tugas** |_Praktikum 7_|
+|**Mata Kuliah**|_Pengolahan Citra_|
+|**Tugas** |_Tgs Pertemuan 14_|
 
 ### Penguraian Pengolahan Citra
 ---
